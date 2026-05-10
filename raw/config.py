@@ -1,10 +1,17 @@
 from pathlib import Path
+from dotenv import load_dotenv
+import os
 
-base_url = "https://tennisapi1.p.rapidapi.com/api/tennis/"
-timeout = 20
-base_dir = Path(__file__).parent.parent
-headers = {
-	"x-rapidapi-key": "9817a15e4emsh3564254c682e117p151e83jsnced5b3fde80f",
+load_dotenv()
+
+BASE_URL = "https://tennisapi1.p.rapidapi.com/api/tennis/"
+TIMEOUT = 20
+BASE_DIR = Path(__file__).parent.parent
+
+
+
+HEADERS = {
+	"x-rapidapi-key": os.getenv("RAPID_API_KEY"),
 	"x-rapidapi-host": "tennisapi1.p.rapidapi.com",
 	"Content-Type": "application/json"
 }

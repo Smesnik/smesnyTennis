@@ -1,3 +1,2 @@
 from common import fetch_data
-
-fetch_data('rankings/atp')
+fetch_data('tournament/2473')
